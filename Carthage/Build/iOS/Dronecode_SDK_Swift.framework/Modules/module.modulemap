@@ -1,0 +1,4 @@
+framework module Dronecode_SDK_Swift {
+  header "Dronecode_SDK_Swift-Swift.h"
+  requires objc
+}

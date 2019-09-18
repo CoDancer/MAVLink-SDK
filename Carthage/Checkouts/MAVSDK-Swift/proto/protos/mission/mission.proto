@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+package dronecode_sdk.rpc.mission;
+
+option java_package = "io.dronecode_sdk.mission";
+option java_outer_classname = "MissionProto";
+
+service MissionService {
+    rpc UploadMission(UploadMissionRequest) returns(UploadMissionResponse) {}
+    rpc DownloadMission(DownloadMissionRequest) returns(DownloadMissionResponse) {}
+    rpc StartMission(StartMissionRequest) returns(StartMissionResponse) {}
+    rpc PauseMission(PauseMissionRequest) returns(PauseMissionResponse) {}
+    rpc SetCurrentMissionItemIndex(SetCurrentMissionItemIndexRequest) returns(SetCurrentMissionItemIndexResponse) {}
+    rpc IsMissionFinished(IsMissionFinishedRequest) returns(IsMissionFinishedResponse) {}
+    rpc SubscribeMissionProgress(SubscribeMissionProgressRequest) returns(stream MissionProgressResponse) {}
+    rpc GetReturnToLaunchAfterMission(GetReturnToLaunchAfterMissionRequest) returns(GetReturnToLaunchAfterMissionResponse) {}
+    rpc SetReturnToLaunchAfterMission(SetReturnToLaunchAfterMissionRequest) returns(SetReturnToLaunchAfterMissionResponse) {}
+}
+
+message UploadMissionRequest {
+    repeated MissionItem mission_items = 1;
+}
+message UploadMissionResponse {
+    MissionResult mission_result = 1;
+}
+
+message DownloadMissionRequest {}
+message DownloadMissionResponse {
+    MissionResult mission_result = 1;
+    repeated MissionItem mission_items = 2;
+}
+
+message StartMissionRequest {}
+message StartMissionResponse {
+    MissionResult mission_result = 1;
+}
+
+message PauseMissionRequest {}
+message PauseMissionResponse {
+    MissionResult mission_result = 1;
+}
+
+message SetCurrentMissionItemIndexRequest {
+    int32 index = 1;
+}
+message SetCurrentMissionItemIndexResponse {
+    MissionResult mission_result = 1;
+}
+
+message IsMissionFinishedRequest {}
+message IsMissionFinishedResponse {
+    bool is_finished = 1;
+}
+
+message SubscribeMissionProgressRequest {}
+message MissionProgressResponse {
+    MissionProgress mission_progress = 1;
+}
+
+message GetReturnToLaunchAfterMissionRequest {}
+message GetReturnToLaunchAfterMissionResponse {
+    bool enable = 1;
+}
+
+message SetReturnToLaunchAfterMissionRequest {
+    bool enable = 1;
+}
+message SetReturnToLaunchAfterMissionResponse {}
+
+message MissionItem {
+    double latitude_deg = 1;
+    double longitude_deg = 2;
+    float relative_altitude_m = 3;
+    float speed_m_s = 4;
+    bool is_fly_through = 5;
+    float gimbal_pitch_deg = 6;
+    float gimbal_yaw_deg = 7;
+    CameraAction camera_action = 8;
+    float loiter_time_s = 9;
+    double camera_photo_interval_s = 10;
+
+    enum CameraAction {
+        NONE = 0;
+        TAKE_PHOTO = 1;
+        START_PHOTO_INTERVAL = 2;
+        STOP_PHOTO_INTERVAL = 3;
+        START_VIDEO = 4;
+        STOP_VIDEO = 5;
+    }
+}
+
+message MissionProgress {
+    int32 current_item_index = 1;
+    int32 mission_count = 2;
+}
+
+message MissionResult {
+    Result result = 1;
+    string result_str = 2;
+
+    enum Result {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        ERROR = 2;
+        TOO_MANY_MISSION_ITEMS = 3;
+        BUSY = 4;
+        TIMEOUT = 5;
+        INVALID_ARGUMENT = 6;
+        UNSUPPORTED = 7;
+        NO_MISSION_AVAILABLE = 8;
+        FAILED_TO_OPEN_QGC_PLAN = 9;
+        FAILED_TO_PARSE_QGC_PLAN = 10;
+        UNSUPPORTED_MISSION_CMD = 11;
+    }
+}

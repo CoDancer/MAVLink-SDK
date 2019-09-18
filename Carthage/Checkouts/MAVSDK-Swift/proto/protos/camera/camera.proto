@@ -1,0 +1,218 @@
+syntax = "proto3";
+
+package dronecode_sdk.rpc.camera;
+
+option java_package = "io.dronecode_sdk.camera";
+option java_outer_classname = "CameraProto";
+
+service CameraService {
+    rpc TakePhoto(TakePhotoRequest) returns(TakePhotoResponse) {}
+    rpc StartPhotoInterval(StartPhotoIntervalRequest) returns(StartPhotoIntervalResponse) {}
+    rpc StopPhotoInterval(StopPhotoIntervalRequest) returns(StopPhotoIntervalResponse) {}
+    rpc StartVideo(StartVideoRequest) returns(StartVideoResponse) {}
+    rpc StopVideo(StopVideoRequest) returns(StopVideoResponse) {}
+    rpc StartVideoStreaming(StartVideoStreamingRequest) returns(StartVideoStreamingResponse) {}
+    rpc StopVideoStreaming(StopVideoStreamingRequest) returns(StopVideoStreamingResponse) {}
+    rpc SetMode(SetModeRequest) returns(SetModeResponse) {}
+    rpc SubscribeMode(SubscribeModeRequest) returns(stream ModeResponse) {}
+    rpc SetVideoStreamSettings(SetVideoStreamSettingsRequest) returns(SetVideoStreamSettingsResponse) {}
+    rpc SubscribeVideoStreamInfo(SubscribeVideoStreamInfoRequest) returns(stream VideoStreamInfoResponse) {}
+    rpc SubscribeCaptureInfo(SubscribeCaptureInfoRequest) returns(stream CaptureInfoResponse) {}
+    rpc SubscribeCameraStatus(SubscribeCameraStatusRequest) returns(stream CameraStatusResponse) {}
+    rpc SubscribeCurrentSettings(SubscribeCurrentSettingsRequest) returns(stream CurrentSettingsResponse) {}
+    rpc SubscribePossibleSettingOptions(SubscribePossibleSettingOptionsRequest) returns(stream PossibleSettingOptionsResponse) {}
+    rpc SetSetting(SetSettingRequest) returns(SetSettingResponse) {}
+}
+
+message TakePhotoRequest {}
+message TakePhotoResponse {
+    CameraResult camera_result = 1;
+}
+
+message StartPhotoIntervalRequest {
+    float interval_s = 1;
+}
+message StartPhotoIntervalResponse {
+    CameraResult camera_result = 1;
+}
+
+message StopPhotoIntervalRequest {}
+message StopPhotoIntervalResponse {
+    CameraResult camera_result = 1;
+}
+
+message StartVideoRequest {}
+message StartVideoResponse {
+    CameraResult camera_result = 1;
+}
+
+message StopVideoRequest {}
+message StopVideoResponse {
+    CameraResult camera_result = 1;
+}
+
+message StartVideoStreamingRequest {}
+message StartVideoStreamingResponse {
+    CameraResult camera_result = 1;
+}
+
+message StopVideoStreamingRequest {}
+message StopVideoStreamingResponse {
+    CameraResult camera_result = 1;
+}
+
+message SetModeRequest {
+    CameraMode camera_mode = 1;
+}
+message SetModeResponse {
+    CameraResult camera_result = 1;
+}
+
+message SubscribeModeRequest {}
+message ModeResponse {
+    CameraMode camera_mode = 1;
+}
+
+message SetVideoStreamSettingsRequest {
+    VideoStreamSettings video_stream_settings = 1;
+}
+message SetVideoStreamSettingsResponse {}
+
+message SubscribeVideoStreamInfoRequest {}
+message VideoStreamInfoResponse {
+    VideoStreamInfo video_stream_info = 1;
+}
+
+message SubscribeCaptureInfoRequest {}
+message CaptureInfoResponse {
+    CaptureInfo capture_info = 1;
+}
+
+message SubscribeCameraStatusRequest {}
+message CameraStatusResponse {
+    CameraStatus camera_status = 1;
+}
+
+message SubscribeCurrentSettingsRequest {}
+message CurrentSettingsResponse {
+    repeated Setting current_settings = 1;
+}
+
+message SubscribePossibleSettingOptionsRequest {}
+message PossibleSettingOptionsResponse {
+    repeated SettingOptions setting_options = 1;
+}
+
+message SetSettingRequest {
+    Setting setting = 1;
+}
+message SetSettingResponse {
+    CameraResult camera_result = 1;
+}
+
+message CameraResult {
+    enum Result {
+        UNKNOWN = 0;
+        SUCCESS = 1;
+        IN_PROGRESS = 2;
+        BUSY = 3;
+        DENIED = 4;
+        ERROR = 5;
+        TIMEOUT = 6;
+        WRONG_ARGUMENT = 7;
+    }
+
+    Result result = 1;
+    string result_str = 2;
+}
+
+enum CameraMode {
+    UNKNOWN = 0;
+    PHOTO = 1;
+    VIDEO = 2;
+}
+
+message CaptureInfo {
+    Position position = 1;
+    Quaternion attitude_quaternion = 2;
+    EulerAngle attitude_euler_angle = 3;
+    uint64 time_utc_us = 4;
+    bool is_success = 5;
+    int32 index = 6;
+    string file_url = 7;
+}
+
+message Position {
+    double latitude_deg = 1;
+    double longitude_deg = 2;
+    float absolute_altitude_m = 3;
+    float relative_altitude_m = 4;
+}
+
+message Quaternion {
+    float w = 1;
+    float x = 2;
+    float y = 3;
+    float z = 4;
+}
+
+message EulerAngle {
+    float roll_deg = 1;
+    float pitch_deg = 2;
+    float yaw_deg = 3;
+}
+
+message VideoStreamSettings {
+    float frame_rate_hz = 1;
+    uint32 horizontal_resolution_pix = 2;
+    uint32 vertical_resolution_pix = 3;
+    uint32 bit_rate_b_s = 4;
+    uint32 rotation_deg = 5;
+    string uri = 6;
+}
+
+message VideoStreamInfo {
+    enum VideoStreamStatus {
+        NOT_RUNNING = 0;
+        IN_PROGRESS = 1;
+    }
+
+    VideoStreamSettings video_stream_settings = 1;
+    VideoStreamStatus video_stream_status = 2;
+}
+
+message CameraStatus {
+    enum StorageStatus {
+        NOT_AVAILABLE = 0;
+        UNFORMATTED = 1;
+        FORMATTED = 2;
+    }
+
+    bool video_on = 1;
+    bool photo_interval_on = 2;
+
+    float used_storage_mib = 3;
+    float available_storage_mib = 4;
+    float total_storage_mib = 5;
+    float recording_time_s = 6;
+    string media_folder_name = 7;
+
+    StorageStatus storage_status = 8;
+}
+
+message Setting {
+    string setting_id = 1;
+    string setting_description = 2;
+    Option option = 3;
+}
+
+message Option {
+    string option_id = 1;
+    string option_description = 2;
+}
+
+message SettingOptions {
+    string setting_id = 1;
+    string setting_description = 2;
+    repeated Option options = 3;
+}

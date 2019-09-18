@@ -1,0 +1,21 @@
+{
+  "commitish" : "0.8.1",
+  "iOS" : [
+    {
+      "name" : "SwiftGRPC",
+      "hash" : "ffbbfdb7f73fe649b7e5c3aabf0028833fc43f4818bd0173d977e773f8bd9545"
+    },
+    {
+      "name" : "CgRPC",
+      "hash" : "527f8b48c76cd16d7e8bb8d4f0b6b000f0856429db6d1f0eb608e4d771a78e2e"
+    },
+    {
+      "name" : "BoringSSL",
+      "hash" : "be5b430db9124ad124eb58e55167d76e915460a73bbfbbd0464786c5b0c0ff61"
+    },
+    {
+      "name" : "SwiftProtobuf",
+      "hash" : "7a7beaaf845a958b733773814a84a7892bd5b27b46952c017320ceef7461b2b4"
+    }
+  ]
+}

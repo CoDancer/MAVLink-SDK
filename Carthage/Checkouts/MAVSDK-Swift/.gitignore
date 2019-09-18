@@ -1,0 +1,15 @@
+*.DS_Store
+*.framework
+
+xcuserdata/
+build/
+bin/
+
+.build
+
+.idea
+
+SampleCode/SwiftSampleCode/Pods/
+
+Carthage/
+docs/

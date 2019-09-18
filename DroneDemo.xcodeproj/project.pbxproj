@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		92339CD122C20AAD001A1ADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339CD022C20AAD001A1ADF /* AppDelegate.swift */; };
+		92339CD322C20AAD001A1ADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339CD222C20AAD001A1ADF /* ViewController.swift */; };
+		92339CD622C20AAD001A1ADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92339CD422C20AAD001A1ADF /* Main.storyboard */; };
+		92339CD822C20AAE001A1ADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92339CD722C20AAE001A1ADF /* Assets.xcassets */; };
+		92339CDB22C20AAE001A1ADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92339CD922C20AAE001A1ADF /* LaunchScreen.storyboard */; };
+		92339CE622C20AAE001A1ADF /* DroneDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339CE522C20AAE001A1ADF /* DroneDemoTests.swift */; };
+		92339CF122C20AAE001A1ADF /* DroneDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92339CF022C20AAE001A1ADF /* DroneDemoUITests.swift */; };
+		92339D0922C21754001A1ADF /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339CFF22C21753001A1ADF /* RxBlocking.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D0A22C21754001A1ADF /* RxAtomic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0022C21753001A1ADF /* RxAtomic.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D0B22C21754001A1ADF /* SwiftGRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0122C21754001A1ADF /* SwiftGRPC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D0C22C21754001A1ADF /* BoringSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0222C21754001A1ADF /* BoringSSL.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D0D22C21754001A1ADF /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0322C21754001A1ADF /* RxCocoa.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D0E22C21754001A1ADF /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0422C21754001A1ADF /* RxSwift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D0F22C21754001A1ADF /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0522C21754001A1ADF /* SwiftProtobuf.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D1022C21754001A1ADF /* Dronecode_SDK_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0622C21754001A1ADF /* Dronecode_SDK_Swift.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D1122C21754001A1ADF /* CgRPC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0722C21754001A1ADF /* CgRPC.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		92339D1222C21754001A1ADF /* backend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92339D0822C21754001A1ADF /* backend.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92339CE222C20AAE001A1ADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92339CC522C20AAD001A1ADF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92339CCC22C20AAD001A1ADF;
+			remoteInfo = DroneDemo;
+		};
+		92339CED22C20AAE001A1ADF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92339CC522C20AAD001A1ADF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92339CCC22C20AAD001A1ADF;
+			remoteInfo = DroneDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		92339CCD22C20AAD001A1ADF /* DroneDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroneDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92339CD022C20AAD001A1ADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		92339CD222C20AAD001A1ADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		92339CD522C20AAD001A1ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92339CD722C20AAE001A1ADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92339CDA22C20AAE001A1ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		92339CDC22C20AAE001A1ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92339CE122C20AAE001A1ADF /* DroneDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92339CE522C20AAE001A1ADF /* DroneDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDemoTests.swift; sourceTree = "<group>"; };
+		92339CE722C20AAE001A1ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92339CEC22C20AAE001A1ADF /* DroneDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DroneDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92339CF022C20AAE001A1ADF /* DroneDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroneDemoUITests.swift; sourceTree = "<group>"; };
+		92339CF222C20AAE001A1ADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92339CFF22C21753001A1ADF /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		92339D0022C21753001A1ADF /* RxAtomic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxAtomic.framework; path = Carthage/Build/iOS/RxAtomic.framework; sourceTree = "<group>"; };
+		92339D0122C21754001A1ADF /* SwiftGRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftGRPC.framework; path = Carthage/Build/iOS/SwiftGRPC.framework; sourceTree = "<group>"; };
+		92339D0222C21754001A1ADF /* BoringSSL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BoringSSL.framework; path = Carthage/Build/iOS/BoringSSL.framework; sourceTree = "<group>"; };
+		92339D0322C21754001A1ADF /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		92339D0422C21754001A1ADF /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		92339D0522C21754001A1ADF /* SwiftProtobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftProtobuf.framework; path = Carthage/Build/iOS/SwiftProtobuf.framework; sourceTree = "<group>"; };
+		92339D0622C21754001A1ADF /* Dronecode_SDK_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Dronecode_SDK_Swift.framework; path = Carthage/Build/iOS/Dronecode_SDK_Swift.framework; sourceTree = "<group>"; };
+		92339D0722C21754001A1ADF /* CgRPC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CgRPC.framework; path = Carthage/Build/iOS/CgRPC.framework; sourceTree = "<group>"; };
+		92339D0822C21754001A1ADF /* backend.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = backend.framework; path = Carthage/Build/iOS/backend.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		92339CCA22C20AAD001A1ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92339D0922C21754001A1ADF /* RxBlocking.framework in Frameworks */,
+				92339D0A22C21754001A1ADF /* RxAtomic.framework in Frameworks */,
+				92339D0B22C21754001A1ADF /* SwiftGRPC.framework in Frameworks */,
+				92339D0C22C21754001A1ADF /* BoringSSL.framework in Frameworks */,
+				92339D0D22C21754001A1ADF /* RxCocoa.framework in Frameworks */,
+				92339D0E22C21754001A1ADF /* RxSwift.framework in Frameworks */,
+				92339D0F22C21754001A1ADF /* SwiftProtobuf.framework in Frameworks */,
+				92339D1022C21754001A1ADF /* Dronecode_SDK_Swift.framework in Frameworks */,
+				92339D1122C21754001A1ADF /* CgRPC.framework in Frameworks */,
+				92339D1222C21754001A1ADF /* backend.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92339CDE22C20AAE001A1ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92339CE922C20AAE001A1ADF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		92339CC422C20AAD001A1ADF = {
+			isa = PBXGroup;
+			children = (
+				92339CCF22C20AAD001A1ADF /* DroneDemo */,
+				92339CE422C20AAE001A1ADF /* DroneDemoTests */,
+				92339CEF22C20AAE001A1ADF /* DroneDemoUITests */,
+				92339CCE22C20AAD001A1ADF /* Products */,
+				92339CFE22C21753001A1ADF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		92339CCE22C20AAD001A1ADF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92339CCD22C20AAD001A1ADF /* DroneDemo.app */,
+				92339CE122C20AAE001A1ADF /* DroneDemoTests.xctest */,
+				92339CEC22C20AAE001A1ADF /* DroneDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92339CCF22C20AAD001A1ADF /* DroneDemo */ = {
+			isa = PBXGroup;
+			children = (
+				92339CD022C20AAD001A1ADF /* AppDelegate.swift */,
+				92339CD222C20AAD001A1ADF /* ViewController.swift */,
+				92339CD422C20AAD001A1ADF /* Main.storyboard */,
+				92339CD722C20AAE001A1ADF /* Assets.xcassets */,
+				92339CD922C20AAE001A1ADF /* LaunchScreen.storyboard */,
+				92339CDC22C20AAE001A1ADF /* Info.plist */,
+			);
+			path = DroneDemo;
+			sourceTree = "<group>";
+		};
+		92339CE422C20AAE001A1ADF /* DroneDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				92339CE522C20AAE001A1ADF /* DroneDemoTests.swift */,
+				92339CE722C20AAE001A1ADF /* Info.plist */,
+			);
+			path = DroneDemoTests;
+			sourceTree = "<group>";
+		};
+		92339CEF22C20AAE001A1ADF /* DroneDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				92339CF022C20AAE001A1ADF /* DroneDemoUITests.swift */,
+				92339CF222C20AAE001A1ADF /* Info.plist */,
+			);
+			path = DroneDemoUITests;
+			sourceTree = "<group>";
+		};
+		92339CFE22C21753001A1ADF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92339D0822C21754001A1ADF /* backend.framework */,
+				92339D0222C21754001A1ADF /* BoringSSL.framework */,
+				92339D0722C21754001A1ADF /* CgRPC.framework */,
+				92339D0622C21754001A1ADF /* Dronecode_SDK_Swift.framework */,
+				92339D0022C21753001A1ADF /* RxAtomic.framework */,
+				92339CFF22C21753001A1ADF /* RxBlocking.framework */,
+				92339D0322C21754001A1ADF /* RxCocoa.framework */,
+				92339D0422C21754001A1ADF /* RxSwift.framework */,
+				92339D0122C21754001A1ADF /* SwiftGRPC.framework */,
+				92339D0522C21754001A1ADF /* SwiftProtobuf.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		92339CCC22C20AAD001A1ADF /* DroneDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92339CF522C20AAE001A1ADF /* Build configuration list for PBXNativeTarget "DroneDemo" */;
+			buildPhases = (
+				92339CC922C20AAD001A1ADF /* Sources */,
+				92339CCA22C20AAD001A1ADF /* Frameworks */,
+				92339CCB22C20AAD001A1ADF /* Resources */,
+				92339D1322C217F3001A1ADF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DroneDemo;
+			productName = DroneDemo;
+			productReference = 92339CCD22C20AAD001A1ADF /* DroneDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		92339CE022C20AAE001A1ADF /* DroneDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92339CF822C20AAE001A1ADF /* Build configuration list for PBXNativeTarget "DroneDemoTests" */;
+			buildPhases = (
+				92339CDD22C20AAE001A1ADF /* Sources */,
+				92339CDE22C20AAE001A1ADF /* Frameworks */,
+				92339CDF22C20AAE001A1ADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92339CE322C20AAE001A1ADF /* PBXTargetDependency */,
+			);
+			name = DroneDemoTests;
+			productName = DroneDemoTests;
+			productReference = 92339CE122C20AAE001A1ADF /* DroneDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		92339CEB22C20AAE001A1ADF /* DroneDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92339CFB22C20AAE001A1ADF /* Build configuration list for PBXNativeTarget "DroneDemoUITests" */;
+			buildPhases = (
+				92339CE822C20AAE001A1ADF /* Sources */,
+				92339CE922C20AAE001A1ADF /* Frameworks */,
+				92339CEA22C20AAE001A1ADF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92339CEE22C20AAE001A1ADF /* PBXTargetDependency */,
+			);
+			name = DroneDemoUITests;
+			productName = DroneDemoUITests;
+			productReference = 92339CEC22C20AAE001A1ADF /* DroneDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		92339CC522C20AAD001A1ADF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = IOS;
+				TargetAttributes = {
+					92339CCC22C20AAD001A1ADF = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					92339CE022C20AAE001A1ADF = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 92339CCC22C20AAD001A1ADF;
+					};
+					92339CEB22C20AAE001A1ADF = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 92339CCC22C20AAD001A1ADF;
+					};
+				};
+			};
+			buildConfigurationList = 92339CC822C20AAD001A1ADF /* Build configuration list for PBXProject "DroneDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 92339CC422C20AAD001A1ADF;
+			productRefGroup = 92339CCE22C20AAD001A1ADF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92339CCC22C20AAD001A1ADF /* DroneDemo */,
+				92339CE022C20AAE001A1ADF /* DroneDemoTests */,
+				92339CEB22C20AAE001A1ADF /* DroneDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		92339CCB22C20AAD001A1ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92339CDB22C20AAE001A1ADF /* LaunchScreen.storyboard in Resources */,
+				92339CD822C20AAE001A1ADF /* Assets.xcassets in Resources */,
+				92339CD622C20AAD001A1ADF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92339CDF22C20AAE001A1ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92339CEA22C20AAE001A1ADF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92339D1322C217F3001A1ADF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftProtobuf.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftGRPC.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxAtomic.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Dronecode_SDK_Swift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/CgRPC.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BoringSSL.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/backend.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftProtobuf.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftGRPC.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxAtomic.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Dronecode_SDK_Swift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/CgRPC.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BoringSSL.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/backend.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		92339CC922C20AAD001A1ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92339CD322C20AAD001A1ADF /* ViewController.swift in Sources */,
+				92339CD122C20AAD001A1ADF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92339CDD22C20AAE001A1ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92339CE622C20AAE001A1ADF /* DroneDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92339CE822C20AAE001A1ADF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92339CF122C20AAE001A1ADF /* DroneDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92339CE322C20AAE001A1ADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92339CCC22C20AAD001A1ADF /* DroneDemo */;
+			targetProxy = 92339CE222C20AAE001A1ADF /* PBXContainerItemProxy */;
+		};
+		92339CEE22C20AAE001A1ADF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92339CCC22C20AAD001A1ADF /* DroneDemo */;
+			targetProxy = 92339CED22C20AAE001A1ADF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		92339CD422C20AAD001A1ADF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92339CD522C20AAD001A1ADF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		92339CD922C20AAE001A1ADF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92339CDA22C20AAE001A1ADF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		92339CF322C20AAE001A1ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		92339CF422C20AAE001A1ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		92339CF622C20AAE001A1ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG9L7VUFJN;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = DroneDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.DroneDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92339CF722C20AAE001A1ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG9L7VUFJN;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = DroneDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.DroneDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		92339CF922C20AAE001A1ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG9L7VUFJN;
+				INFOPLIST_FILE = DroneDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.DroneDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroneDemo.app/DroneDemo";
+			};
+			name = Debug;
+		};
+		92339CFA22C20AAE001A1ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG9L7VUFJN;
+				INFOPLIST_FILE = DroneDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.DroneDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DroneDemo.app/DroneDemo";
+			};
+			name = Release;
+		};
+		92339CFC22C20AAE001A1ADF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG9L7VUFJN;
+				INFOPLIST_FILE = DroneDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.DroneDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DroneDemo;
+			};
+			name = Debug;
+		};
+		92339CFD22C20AAE001A1ADF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG9L7VUFJN;
+				INFOPLIST_FILE = DroneDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.DroneDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DroneDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		92339CC822C20AAD001A1ADF /* Build configuration list for PBXProject "DroneDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92339CF322C20AAE001A1ADF /* Debug */,
+				92339CF422C20AAE001A1ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92339CF522C20AAE001A1ADF /* Build configuration list for PBXNativeTarget "DroneDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92339CF622C20AAE001A1ADF /* Debug */,
+				92339CF722C20AAE001A1ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92339CF822C20AAE001A1ADF /* Build configuration list for PBXNativeTarget "DroneDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92339CF922C20AAE001A1ADF /* Debug */,
+				92339CFA22C20AAE001A1ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92339CFB22C20AAE001A1ADF /* Build configuration list for PBXNativeTarget "DroneDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92339CFC22C20AAE001A1ADF /* Debug */,
+				92339CFD22C20AAE001A1ADF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 92339CC522C20AAD001A1ADF /* Project object */;
+}
